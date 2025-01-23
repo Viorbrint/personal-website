@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petrukovich Bogdan</title>
+  <link rel="stylesheet" href="output.css" />
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+
+<body class="bg-background h-screen">
+  <div class="w-11/12 max-w-screen-lg bg-primary h-full m-auto">
+    <button hx-post="/clicked" hx-target="next div">
+      Click Me
+    </button>
+    <div>
+    </div>
+  </div>
+</body>
+
+</html>
