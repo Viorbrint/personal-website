@@ -8,5 +8,29 @@
   body {
     @apply font-main;
     @apply text-text;
+    @apply bg-background;
   }
+  a {
+    @apply underline;
+    @apply hover:no-underline;
+  }
+  i {
+    @apply text-primary;
+    @apply text-3xl;
+  }
+  h1 {
+    @apply font-bold;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+}
+
+.text-shadow {
+  text-shadow: #f2e8ff50 0px 10px 50px;
 }

@@ -11,12 +11,6 @@ module.exports = {
         accent: "#54cdaa",
         "text-accent": "#f2e8ff",
       },
-      fontSize: {
-        base: "0.875rem",
-        lg: "1.15625rem",
-        xl: "1.5625rem",
-        "2xl": "1.9375rem",
-      },
       fontFamily: {
         main: "Inter",
       },

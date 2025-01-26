@@ -17,15 +17,8 @@ app.set("view engine", "ejs");
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-let count = 0;
-
 app.get("/", (_, res) => {
   res.render("index");
-});
-
-app.post("/clicked", (_, res) => {
-  res.send(String(count));
-  count++;
 });
 
 app
