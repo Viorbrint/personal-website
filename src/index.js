@@ -17,8 +17,28 @@ app.set("view engine", "ejs");
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "..", "public")));
 
+let data = {
+  projects: [
+    {
+      name: "Forms",
+      summary:
+        "A customizable forms web application built with .NET Blazor Server. Create, manage, and analyze form templates with user authentication, admin controls, and Salesforce integration.",
+      tags: [
+        "Dotnet",
+        "Docker",
+        "Web-Application",
+        "Forms",
+        "Blazor",
+        "User",
+        "Awesome",
+        "Awesome",
+        "Awesome",
+      ],
+    },
+  ],
+};
 app.get("/", (_, res) => {
-  res.render("index");
+  res.render("index", data);
 });
 
 app

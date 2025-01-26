@@ -1,0 +1,15 @@
+<article class="rounded-2xl border-accent border-2">
+  <div class="p-6">
+    <h3 class="mb-2">
+      <%= name %>
+    </h3>
+    <p class="mb-6">
+      <%= summary %>
+    </p>
+    <div class="flex justify-between flex-wrap gap-2">
+      <% tags.forEach(tag => { %>
+        <div class="text-background rounded-full bg-accent px-2"><%= tag %></div>
+      <% }); %>
+    </div>
+  </div>
+</article>

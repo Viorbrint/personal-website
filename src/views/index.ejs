@@ -48,26 +48,9 @@
           <a href="/projects">See all projects</a>
         </div>
         <div class="flex flex-col gap-6">
-          <article class="rounded-2xl border-accent border-2">
-            <div class="p-6">
-              <h3 class="mb-2">Forms</h3>
-              <p class="mb-6">
-                A customizable forms web application built with .NET Blazor Server. Create, manage, and analyze form
-                templates with user authentication, admin controls, and Salesforce integration.
-              </p>
-              <div class="flex justify-between flex-wrap gap-2">
-                <div class="text-background rounded-full bg-accent px-2">Dotnet</div>
-                <div class="text-background rounded-full bg-accent px-2">Docker</div>
-                <div class="text-background rounded-full bg-accent px-2">Web-Application</div>
-                <div class="text-background rounded-full bg-accent px-2">Forms</div>
-                <div class="text-background rounded-full bg-accent px-2">Blazor</div>
-                <div class="text-background rounded-full bg-accent px-2">User-Management</div>
-                <div class="text-background rounded-full bg-accent px-2">Awesome</div>
-                <div class="text-background rounded-full bg-accent px-2">Awesome</div>
-                <div class="text-background rounded-full bg-accent px-2">Awesome</div>
-              </div>
-            </div>
-          </article>
+          <% projects.forEach(project=> { %>
+            <%- include('./project-summary.ejs', project) %>
+              <% }); %>
         </div>
       </section>
     </main>
