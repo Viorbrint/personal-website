@@ -35,6 +35,36 @@ let data = {
         "Awesome",
       ],
     },
+    {
+      name: "BookStoreTester",
+      summary: "Something",
+      tags: [
+        "Dotnet",
+        "Docker",
+        "Web-Application",
+        "Forms",
+        "Blazor",
+        "User",
+        "Awesome",
+        "Awesome",
+        "Awesome",
+      ],
+    },
+    {
+      name: "BookStoreTester",
+      summary: "Something",
+      tags: [
+        "Dotnet",
+        "Docker",
+        "Web-Application",
+        "Forms",
+        "Blazor",
+        "User",
+        "Awesome",
+        "Awesome",
+        "Awesome",
+      ],
+    },
   ],
 };
 app.get("/", (_, res) => {

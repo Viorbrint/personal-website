@@ -647,6 +647,18 @@ h3{
   flex-wrap: wrap;
 }
 
+.content-end{
+  align-content: flex-end;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
+.items-center{
+  align-items: center;
+}
+
 .justify-between{
   justify-content: space-between;
 }
