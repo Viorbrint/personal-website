@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import { fileURLToPath } from "url";
 import path from "path";
+import expressEjsLayouts from "express-ejs-layouts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -67,6 +68,10 @@ let data = {
     },
   ],
 };
+
+app.use(expressEjsLayouts);
+app.set("layout", "layout");
+
 app.get("/", (_, res) => {
   res.render("index", data);
 });

@@ -1,60 +1,44 @@
-<!doctype html>
-<html lang="en">
+<% title = "Petrukovich Bogdan"; %>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Petrukovich Bogdan</title>
-  <link rel="stylesheet" href="output.css" />
-  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
-  <script src="https://kit.fontawesome.com/3e561c4d16.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="h-screen text-base">
-  <div class="px-6 max-w-screen-lg h-full m-auto">
-    <nav class="flex py-5 mb-6 justify-between">
-      <div>
-        <a href="/">Home</a>
-      </div>
-      <div class="flex gap-2">
-        <a href="/projects">Projects</a>
-        <span class="text-text-accent">/</span>
-        <a href="/blog">Blog</a>
-        <span class="text-text-accent">/</span>
-        <a href="/stats">Stats</a>
-      </div>
-    </nav>
-
-    <main>
-      <header class="mb-7">
-        <h1 class="mb-1 text-text-accent text-4xl text-shadow">
-          Bogdan Petrukovich
-        </h1>
-        <h3 class="mb-2 bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-shadow">
-          Web Developer
-        </h3>
-        <div class="mb-5 flex gap-3">
-          <a target="_blank" href="https://github.com/Viorbrint"><i class="fa-brands fa-github text-shadow"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/bogdan-petrukovich/"><i class="fa-brands fa-linkedin text-shadow"></i></a>
-        </div>
-        <p>
-          👋 Hi! I'm a junior developer with experience in .NET, Blazor, Node.js, and TypeScript. Currently looking for
-          my first job and open to any opportunities!
-        </p>
-      </header>
-      <section id="projects">
-        <div class="mb-7 flex items-center justify-between">
-          <h2>Recent projects</h2>
-          <a href="/projects">See all projects</a>
-        </div>
-        <div class="flex flex-col gap-6">
-          <% projects.forEach(project=> { %>
-            <%- include('./project-summary.ejs', project) %>
-              <% }); %>
-        </div>
-      </section>
-    </main>
+<nav class="flex py-5 mb-6 justify-between">
+  <div>
+    <a href="/">Home</a>
   </div>
-</body>
+  <div class="flex gap-2">
+    <a href="/projects">Projects</a>
+    <span class="text-text-accent">/</span>
+    <a href="/blog">Blog</a>
+    <span class="text-text-accent">/</span>
+    <a href="/stats">Stats</a>
+  </div>
+</nav>
 
-</html>
+<main>
+  <header class="mb-7">
+    <h1 class="mb-1 text-text-accent text-4xl text-shadow">
+      Bogdan Petrukovich
+    </h1>
+    <h3 class="mb-2 bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-shadow">
+      Web Developer
+    </h3>
+    <div class="mb-5 flex gap-3">
+      <a target="_blank" href="https://github.com/Viorbrint"><i class="fa-brands fa-github text-shadow"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/bogdan-petrukovich/"><i class="fa-brands fa-linkedin text-shadow"></i></a>
+    </div>
+    <p>
+      👋 Hi! I'm a junior developer with experience in .NET, Blazor, Node.js, and TypeScript. Currently looking for
+      my first job and open to any opportunities!
+    </p>
+  </header>
+  <section id="projects">
+    <div class="mb-7 flex items-center justify-between">
+      <h2>Recent projects</h2>
+      <a href="/projects">See all projects</a>
+    </div>
+    <div class="flex flex-col gap-6">
+      <% projects.forEach(project=> { %>
+        <%- include('./project-summary.ejs', project) %>
+          <% }); %>
+    </div>
+  </section>
+</main>

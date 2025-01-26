@@ -9,6 +9,7 @@
     @apply font-main;
     @apply text-text;
     @apply bg-background;
+    @apply text-base;
   }
   a {
     @apply underline;
