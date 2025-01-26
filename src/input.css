@@ -26,7 +26,7 @@
     @apply font-bold;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-xl;
     @apply font-bold;
   }
 }
