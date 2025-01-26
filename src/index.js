@@ -76,6 +76,10 @@ app.get("/", (_, res) => {
   res.render("index", data);
 });
 
+app.get("/stats", (_, res) => {
+  res.render("stats", data);
+});
+
 app
   .listen(port, () => {
     console.log(`Server running on port ${port}`);
