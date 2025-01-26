@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import morgan from "morgan";
 import { fileURLToPath } from "url";
 import path from "path";
@@ -12,13 +12,17 @@ console.log(__dirname);
 const DEFAULT_PORT = 3000;
 const port = process.env.PORT || DEFAULT_PORT;
 
-const app = express();
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
-app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "..", "public")));
+interface Project {
+  name: string;
+  summary: string;
+  tags: string[];
+}
 
-let data = {
+interface Data {
+  projects: Project[];
+}
+
+const data: Data = {
   projects: [
     {
       name: "Forms",
@@ -69,14 +73,21 @@ let data = {
   ],
 };
 
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+app.use(morgan("dev"));
+app.use(express.static(path.join(__dirname, "..", "public")));
 app.use(expressEjsLayouts);
 app.set("layout", "layout");
 
-app.get("/", (_, res) => {
+app.get("/", (_: Request, res: Response) => {
   res.render("index", data);
 });
 
-app.get("/stats", (_, res) => {
+app.get("/stats", (_: Request, res: Response) => {
   res.render("stats", data);
 });
 
