@@ -20,6 +20,7 @@
     @apply text-3xl;
   }
   h1 {
+    @apply text-4xl;
     @apply font-bold;
   }
   h2 {
