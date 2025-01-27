@@ -88,7 +88,7 @@ app.get("/", (_: Request, res: Response) => {
 });
 
 app.get("/stats", (_: Request, res: Response) => {
-  res.render("stats", data);
+  res.render("stats", { commits: 3 });
 });
 
 app
